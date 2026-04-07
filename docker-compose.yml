@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: miniastra-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: miniastra
+      POSTGRES_USER: miniastra
+      POSTGRES_PASSWORD: miniastra
+    ports:
+      - "5432:5432"
+    volumes:
+      - miniastra_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U miniastra -d miniastra"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  miniastra_pgdata:

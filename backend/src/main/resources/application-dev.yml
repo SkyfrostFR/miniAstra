@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/miniastra
+    username: miniastra
+    password: miniastra
+
+  jpa:
+    show-sql: true
