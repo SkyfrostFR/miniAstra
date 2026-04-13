@@ -1,0 +1,21 @@
+---
+source_file: "backend/src/main/java/fr/miniastra/infrastructure/persistence/StationRepositoryAdapter.java"
+type: "code"
+community: "Station & Conflict Management"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Station_&_Conflict_Management
+---
+
+# StationRepositoryAdapter.java
+
+## Connections
+- [[Station.java]] - `imports` [EXTRACTED]
+- [[StationEntityMapper.java]] - `imports` [EXTRACTED]
+- [[StationJpaRepository.java]] - `imports` [EXTRACTED]
+- [[StationRepository.java]] - `imports` [EXTRACTED]
+- [[StationRepositoryAdapter]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Station_&_Conflict_Management

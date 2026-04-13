@@ -1,0 +1,18 @@
+---
+source_file: "backend/src/main/java/fr/miniastra/api/exception/ConflictException.java"
+type: "code"
+community: "Station & Conflict Management"
+location: "L3"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Station_&_Conflict_Management
+---
+
+# ConflictException
+
+## Connections
+- [[.ConflictException()]] - `method` [EXTRACTED]
+- [[ConflictException.java]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Station_&_Conflict_Management
