@@ -49,6 +49,8 @@ Application locale mono-utilisateur permettant de créer et exporter des scénar
 
 ## Démarrage rapide
 
+### Linux / macOS
+
 ```bash
 # Tout démarrer (BDD + backend + frontend)
 ./dev.sh
@@ -59,6 +61,21 @@ Application locale mono-utilisateur permettant de créer et exporter des scénar
 ./dev.sh frontend    # Frontend Vite
 ```
 
+### Windows (PowerShell)
+
+```powershell
+# Autoriser l'exécution des scripts (une seule fois, en administrateur)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Tout démarrer
+.\dev.ps1
+
+# Ou composante par composante
+.\dev.ps1 db         # PostgreSQL uniquement (Docker)
+.\dev.ps1 backend    # Backend Spring Boot
+.\dev.ps1 frontend   # Frontend Vite
+```
+
 | Service | URL |
 |---------|-----|
 | Frontend | http://localhost:5173 |
@@ -67,15 +84,15 @@ Application locale mono-utilisateur permettant de créer et exporter des scénar
 
 ---
 
-## Commandes dev.sh
+## Commandes dev.sh / dev.ps1
 
-```bash
-./dev.sh              # Démarre tout
-./dev.sh stop         # Arrête tous les services
-./dev.sh logs         # Logs PM2 backend
-./dev.sh logs-front   # Logs PM2 frontend
-./dev.sh status       # Statut PM2 + Docker
-```
+| Commande | Linux/macOS | Windows |
+|----------|-------------|---------|
+| Tout démarrer | `./dev.sh` | `.\dev.ps1` |
+| Arrêter tout | `./dev.sh stop` | `.\dev.ps1 stop` |
+| Logs backend | `./dev.sh logs` | `.\dev.ps1 logs` |
+| Logs frontend | `./dev.sh logs-front` | `.\dev.ps1 logs-front` |
+| Statut | `./dev.sh status` | `.\dev.ps1 status` |
 
 ---
 
@@ -108,7 +125,8 @@ miniAstra/
 ├── docs/                       # Spécifications + architecture + tickets + ADR
 ├── docker-compose.yml          # PostgreSQL 16
 ├── ecosystem.config.cjs        # Configuration PM2
-└── dev.sh                      # Script de démarrage
+├── dev.sh                      # Script de démarrage (Linux/macOS)
+└── dev.ps1                     # Script de démarrage (Windows)
 ```
 
 ---
